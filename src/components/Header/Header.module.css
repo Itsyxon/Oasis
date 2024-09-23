@@ -1,0 +1,8 @@
+.headerLink {
+    color: white;
+    transition: .3s all;
+}
+
+.headerLink:hover {
+    color: #ffd700;
+}

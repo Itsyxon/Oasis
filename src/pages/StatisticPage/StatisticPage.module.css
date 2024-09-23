@@ -1,0 +1,8 @@
+.statisticSelect {
+    border: none !important;
+    outline: none;
+}
+
+.statisticSelect.Mui-focused {
+    border: 5px solid rgb(255, 0, 0) !important;
+}

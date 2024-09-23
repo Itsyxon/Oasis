@@ -1,0 +1,15 @@
+.mainButton {
+    padding: 7px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #ffd700;
+    border: none;
+    font-size: 16px;
+    color: black;
+    transition: background .2s ease-in-out;
+    font-family: "Montserrat"
+}
+
+.mainButton:hover {
+    background-color: #ffb700;
+}
