@@ -1,50 +1,63 @@
-# React + TypeScript + Vite
+# Оазис
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Проект по разработке многостраничного сайта на React с использованием технологий:
 
-Currently, two official plugins are available:
+- Vite
+- TypeScript
+- React
+- React Router
+- Material UI
+- Chart.js
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Установка и запуск
 
-## Expanding the ESLint configuration
+1. Клонирование репозитория
+   `git clone https://github.com/Itsyxon/Oazis`
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+2. Установка зависимостей
+   `npm install`
 
-- Configure the top-level `parserOptions` property like this:
+3. Сборка приложения
+   `npm run dev`
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+4. Приложение доступно по адресу
+   `localhost:5173`
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+### О проекте
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+Дизайн был взят из головы. Выбор Material UI просто ускоряет работу, чтобы использовать готовые компоненты, а также стили. Первоначально, выбор пал на Next.js в качестве роутинга и мой любимый Tailwind, но всё же решил попробовать создать на Material UI.
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+### Структура проекта
+
+`assets`
+Папка для изображений
+
+`src/`
+Главная рабочая директория
+
+`src/components/`
+Содержит React-компоненты
+
+`src/pages/`
+Содержит страницы приложения (роутинг)
+
+`src/data/`
+Содержит локальные данные
+
+```src/hooks/`
+Содержит кастомные хуки
+
+`index.css`
+Содержит глобальные стили
+
+`main.tsx`
+Главный исполнительный файл-обёртка приложения
+
+`theme.ts`
+Содержит настройку тем в приложении
+
+`router.tsx`
+Содержит маршрутизацию и настройку путей в приложении
+
+`index.html`
+Главная страница сайта
