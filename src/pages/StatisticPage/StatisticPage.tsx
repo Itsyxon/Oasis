@@ -108,7 +108,7 @@ const StatisticPage = memo(() => {
                         <Typography>Название водоёма: <div className={styles.extraBlock}>{optionValue.lakeName}</div></Typography>
                         <Typography>Описание водоёма: <div className={styles.extraBlock}>{optionValue.lakeDescription}</div></Typography>
                     </Stack>
-                    <Stack direction={'row'} gap={4} mt={2} ml={1}>
+                    <Stack direction={'row'} gap={4} mt={5} ml={1}>
                         <Paper sx={{
                             height: 257,
                             width: 257,

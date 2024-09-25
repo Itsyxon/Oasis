@@ -54,7 +54,7 @@ const StatisticTable: React.FC<Props> = memo(({ fishesList, optionValue }) => {
                             <StyledTableRow key={fish.id}>
                                 <TableCell>{fish.fishName}</TableCell>
                                 <TableCell>{fish.catchDate}</TableCell>
-                                <TableCell>{fish.fishWeight}</TableCell>
+                                <TableCell>{fish.fishWeight} кг</TableCell>
                                 <TableCell>{fish.bait}</TableCell>
                             </StyledTableRow> : null
 

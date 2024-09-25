@@ -38,7 +38,7 @@ const fishesList: Fish[] = [
     catchDate: '23.09.2024 04:52',
     lakeName: 'Озеро Беглое',
     fishWeight: 2.52,
-    bait: 'Боил',
+    bait: 'Бойл',
   },
   {
     id: 2,
