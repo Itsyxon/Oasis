@@ -1,8 +1,9 @@
-.statisticSelect {
-    border: none !important;
-    outline: none;
-}
-
-.statisticSelect.Mui-focused {
-    border: 5px solid rgb(255, 0, 0) !important;
+.extraBlock {
+    display: inline-block;
+    padding: 12px 15px;
+    border: 1px solid #293f2b;
+    min-width: 350px;
+    border-radius: 50px;
+    margin-left: 20px;
+    background-color: rgba(67, 84, 69, 0.09);
 }

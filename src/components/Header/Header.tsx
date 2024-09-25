@@ -17,7 +17,6 @@ const Header = () => {
                         </Box>
                         <Button>Заказать звонок</Button>
                     </Stack>
-
                 </Container>
             </Box>
             <Outlet />
