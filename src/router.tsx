@@ -5,11 +5,12 @@ import HomePage from "./pages/HomePage/HomePage";
 import StatisticPage from "./pages/StatisticPage/StatisticPage";
 import ContactPage from "./pages/ContactPage/ContactPage";
 import PricePage from "./pages/PricePage/PricePage";
+import PageWrapper from "./pages/PageWrapper/PageWrapper";
 
 const router = createBrowserRouter([
     {
         element: (
-            <Header />
+            <PageWrapper />
         ),
         errorElement: <ErrorPage />,
         children: [

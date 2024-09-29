@@ -1,0 +1,11 @@
+.pricePic {
+    height: 400px;
+    width: 560px;
+    object-fit: cover;
+}
+
+.priceTitle {
+    font-size: 24px;
+    font-weight: 300;
+    text-transform: uppercase;
+}

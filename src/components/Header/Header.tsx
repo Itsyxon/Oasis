@@ -1,5 +1,5 @@
 import { Box, Container, Stack } from '@mui/material';
-import { Link, Outlet } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import styles from './Header.module.css'
 import Button from '../ui/Button/Button';
 
@@ -19,7 +19,6 @@ const Header = () => {
                     </Stack>
                 </Container>
             </Box>
-            <Outlet />
         </>
     );
 };

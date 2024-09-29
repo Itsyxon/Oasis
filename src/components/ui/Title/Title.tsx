@@ -2,7 +2,7 @@ import { Typography } from '@mui/material';
 import React from 'react';
 
 type Props = {
-    variant: 'h3'
+    variant: 'h4' | 'h3'
     children: React.ReactNode
 }
 
