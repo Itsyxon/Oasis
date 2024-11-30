@@ -97,7 +97,8 @@ const StatisticPage = memo(() => {
                         },
                     }}>
                         {lakes.map((lake) => (
-                            <MenuItem key={lake.id} value={lake}>
+                            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                            <MenuItem key={lake.id} value={lake as any}>
                                 {lake.lakeName}
                             </MenuItem>
                         ))}
