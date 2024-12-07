@@ -1,4 +1,4 @@
-import { Box, Container, Stack } from '@mui/material'
+import { Box, Container, Grid, Stack } from '@mui/material'
 import Title from '../../components/ui/Title/Title'
 import Text from '../../components/ui/Text/Text'
 import styles from './HomePage.module.css'
@@ -23,10 +23,40 @@ function HomePage() {
         </Box>
       </Container>
       <div className={styles.lakeBackground} />
-      <Container>
+      <Container sx={{ p: 5 }}>
         <Title variant='h4'>
           Преимущества нашего комплекса
         </Title>
+        <Grid container gap={3} justifyContent={'center'}>
+          <Stack alignItems={'center'}>
+            <Text sx={{ fontSize: '18px' }}>
+              Отдалённое расположение
+            </Text>
+            <span className={styles.yellowDot}></span>
+            <Text>Комплекс расположен вдали от города</Text>
+          </Stack>
+          <Stack alignItems={'center'}>
+            <Text sx={{ fontSize: '18px' }}>
+              Гармония и природа
+            </Text>
+            <span className={styles.yellowDot}></span>
+            <Text>Лес, озёра, речка</Text>
+          </Stack>
+          <Stack alignItems={'center'}>
+            <Text sx={{ fontSize: '18px' }}>
+              Чистота
+            </Text>
+            <span className={styles.yellowDot}></span>
+            <Text>У нас не мусорят</Text>
+          </Stack>
+          <Stack alignItems={'center'}>
+            <Text sx={{ fontSize: '18px' }}>
+              Приятные цены
+            </Text>
+            <span className={styles.yellowDot}></span>
+            <Text>Недорогие цены для посещения</Text>
+          </Stack>
+        </Grid>
       </Container>
     </Box >
   )

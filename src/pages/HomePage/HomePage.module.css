@@ -14,3 +14,10 @@
     max-width: 130px;
     margin-bottom: 25px;
 }
+
+.yellowDot {
+    width: 20px;
+    height: 20px;
+    background-color: #ffd700;
+    border-radius: 50%;
+}
