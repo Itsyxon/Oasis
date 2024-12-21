@@ -1,4 +1,4 @@
-import { Box, Container, Grid, Stack } from '@mui/material'
+import { Box, Container, Stack } from '@mui/material'
 import Title from '../../components/ui/Title/Title'
 import Text from '../../components/ui/Text/Text'
 import styles from './HomePage.module.css'
