@@ -1,0 +1,84 @@
+.form {
+  display: grid;
+  gap: 18px;
+}
+
+.field {
+  display: grid;
+  gap: 6px;
+}
+
+.field label {
+  font-weight: 600;
+}
+
+.field label span {
+  font-weight: 400;
+  color: var(--ink-soft);
+  margin-left: 6px;
+}
+
+.field input,
+.field textarea {
+  width: 100%;
+  min-height: 48px;
+  padding: 12px 14px;
+  border: 1px solid rgba(23, 32, 28, 0.28);
+  border-radius: var(--radius);
+  background: var(--paper);
+  transition: border-color 0.15s ease;
+}
+
+.field textarea {
+  resize: vertical;
+}
+
+.field input:focus-visible,
+.field textarea:focus-visible {
+  outline-offset: 0;
+  border-color: var(--spruce);
+}
+
+.field [aria-invalid='true'] {
+  border-color: var(--danger);
+}
+
+.error {
+  color: var(--danger);
+  font-size: var(--step--1);
+}
+
+.form button[type='submit'] {
+  justify-self: start;
+}
+
+.form button:disabled {
+  opacity: 0.7;
+  cursor: progress;
+}
+
+.hint {
+  font-size: var(--step--1);
+  color: var(--ink-soft);
+}
+
+.done {
+  display: grid;
+  gap: 12px;
+  justify-items: start;
+  padding: 22px 24px;
+  border-left: 3px solid var(--spruce);
+  background: var(--paper);
+  border-radius: 0 var(--radius) var(--radius) 0;
+}
+
+.done p {
+  font-size: var(--step-1);
+}
+
+.done button {
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+}

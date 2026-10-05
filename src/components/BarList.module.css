@@ -1,0 +1,64 @@
+.list {
+  display: grid;
+  gap: 10px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 7em minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 12px;
+  font-size: var(--step--1);
+}
+
+.label {
+  font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.track {
+  height: 12px;
+  border-radius: 6px;
+  background: #e7ebe4;
+  overflow: hidden;
+}
+
+.bar {
+  display: block;
+  height: 100%;
+  border-radius: 6px;
+  background: var(--lake);
+  transition: width 0.45s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.list[data-tone='gold'] .bar {
+  background: var(--gold);
+}
+
+.value {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  min-width: 1.5em;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.hint {
+  min-width: 4.2em;
+  font-weight: 400;
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+}
+
+.empty {
+  color: var(--ink-soft);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bar {
+    transition: none;
+  }
+}

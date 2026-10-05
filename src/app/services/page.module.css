@@ -1,0 +1,153 @@
+.service {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+  gap: clamp(28px, 5vw, 72px);
+  align-items: center;
+  padding-block: clamp(40px, 5vw, 64px);
+  scroll-margin-top: 80px;
+}
+
+.service + .service {
+  border-top: 1px solid var(--line);
+}
+
+.service:nth-of-type(even) {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr);
+}
+
+.service:nth-of-type(even) .image {
+  order: 2;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  border-radius: var(--radius);
+}
+
+.body h2 {
+  font-size: var(--step-4);
+  color: var(--spruce);
+}
+
+.summary {
+  margin-top: 16px;
+  font-size: var(--step-1);
+  line-height: 1.5;
+  color: var(--ink-soft);
+}
+
+.details {
+  display: grid;
+  gap: 8px;
+  margin-top: 22px;
+}
+
+.details li {
+  padding-left: 22px;
+  position: relative;
+}
+
+.details li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.68em;
+  width: 10px;
+  height: 2px;
+  background: var(--gold);
+}
+
+.price {
+  margin-block: 26px 22px;
+  color: var(--ink-soft);
+}
+
+.price strong {
+  font-family: var(--font-display), serif;
+  font-size: var(--step-3);
+  color: var(--ink);
+}
+
+.pricesBlock {
+  margin-top: clamp(40px, 5vw, 64px);
+  background: var(--paper);
+}
+
+.pricesTitle {
+  font-size: var(--step-4);
+  color: var(--spruce);
+  margin-bottom: 40px;
+}
+
+.priceGroups {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(28px, 4vw, 56px);
+  align-items: start;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table caption {
+  text-align: left;
+  font-family: var(--font-display), serif;
+  font-size: var(--step-2);
+  font-weight: 700;
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--spruce);
+}
+
+.table th,
+.table td {
+  padding-block: 14px;
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+}
+
+.table th {
+  text-align: left;
+  font-weight: 600;
+}
+
+.table th span {
+  display: block;
+  font-weight: 400;
+  font-size: var(--step--1);
+  color: var(--ink-soft);
+}
+
+.table td {
+  padding-left: 16px;
+  text-align: right;
+  white-space: nowrap;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.note {
+  margin-top: 32px;
+  color: var(--ink-soft);
+}
+
+@media (max-width: 960px) {
+  .priceGroups {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 860px) {
+  .service,
+  .service:nth-of-type(even) {
+    grid-template-columns: 1fr;
+  }
+
+  .service:nth-of-type(even) .image {
+    order: 0;
+  }
+}

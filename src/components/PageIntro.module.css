@@ -1,0 +1,9 @@
+.intro {
+  padding-block: clamp(56px, 8vw, 104px) clamp(32px, 4vw, 48px);
+}
+
+.intro h1 {
+  font-size: var(--step-5);
+  color: var(--spruce);
+  margin-bottom: 20px;
+}

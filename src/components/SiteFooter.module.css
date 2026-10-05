@@ -1,0 +1,86 @@
+.footer {
+  background: var(--spruce);
+  color: var(--spruce-soft);
+  padding-top: 64px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1.3fr;
+  gap: 40px;
+}
+
+.about p {
+  max-width: 30em;
+  margin-top: 16px;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-display), serif;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--paper);
+  text-decoration: none;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px rgba(250, 251, 248, 0.25);
+}
+
+.heading {
+  font-family: var(--font-text), sans-serif;
+  font-size: var(--step--1);
+  font-weight: 600;
+  letter-spacing: 0;
+  color: var(--gold);
+  margin-bottom: 14px;
+}
+
+.list {
+  display: grid;
+  gap: 8px;
+}
+
+.list a {
+  text-decoration: none;
+}
+
+.list a:hover {
+  color: var(--paper);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.bottom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 8px 24px;
+  margin-top: 56px;
+  padding-block: 24px;
+  border-top: 1px solid rgba(250, 251, 248, 0.14);
+  font-size: var(--step--1);
+  color: rgba(223, 231, 225, 0.75);
+}
+
+@media (max-width: 760px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .about {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 440px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

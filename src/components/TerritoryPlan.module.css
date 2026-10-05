@@ -1,0 +1,198 @@
+.plan {
+  display: grid;
+  grid-template-columns: minmax(0, 1.75fr) minmax(280px, 1fr);
+  gap: clamp(24px, 4vw, 56px);
+  align-items: start;
+}
+
+.map {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 0 1px var(--line), 0 30px 60px -40px rgba(30, 58, 47, 0.55);
+}
+
+.map svg {
+  width: 100%;
+  height: auto;
+  font-family: var(--font-text), sans-serif;
+}
+
+.trees circle {
+  fill: #7fa082;
+  opacity: 0.55;
+}
+
+.grounds {
+  fill: #eef2e8;
+  stroke: rgba(30, 58, 47, 0.12);
+}
+
+.road {
+  stroke: #c9cfc2;
+  stroke-width: 36;
+}
+
+.path {
+  stroke: #c8c0a2;
+  stroke-width: 4;
+  stroke-dasharray: 2 8;
+  stroke-linecap: round;
+}
+
+.shape {
+  cursor: pointer;
+}
+
+.shape rect {
+  fill: var(--spruce);
+  transition: fill 0.2s ease;
+}
+
+.shape text {
+  fill: var(--paper);
+  font-size: 19px;
+  font-weight: 600;
+  pointer-events: none;
+}
+
+.shape:hover rect {
+  fill: var(--spruce-hover);
+}
+
+.shape[data-active='true'] rect {
+  fill: var(--gold);
+}
+
+.shape[data-active='true'] text {
+  fill: var(--ink);
+}
+
+.water {
+  fill: var(--lake);
+  transition: fill 0.2s ease;
+}
+
+.river {
+  fill: none;
+  stroke: var(--lake);
+  stroke-width: 38;
+  stroke-linecap: round;
+  transition: stroke 0.2s ease;
+}
+
+.sand {
+  fill: var(--sand);
+  transition: fill 0.2s ease;
+}
+
+.water:hover {
+  fill: #5d8f96;
+}
+
+.river:hover {
+  stroke: #5d8f96;
+}
+
+.water[data-active='true'] {
+  fill: #3a6a71;
+}
+
+.river[data-active='true'] {
+  stroke: #3a6a71;
+}
+
+.sand[data-active='true'] {
+  fill: var(--gold);
+}
+
+.labels text {
+  fill: var(--paper);
+  font-family: var(--font-display), serif;
+  font-size: 24px;
+  font-style: italic;
+  pointer-events: none;
+}
+
+.labels text:nth-child(2) {
+  fill: #8a7a4c;
+  font-size: 18px;
+}
+
+.side {
+  display: grid;
+  gap: 22px;
+}
+
+.group {
+  border: 0;
+  padding: 0;
+  min-width: 0;
+}
+
+.group legend {
+  padding: 0;
+  margin-bottom: 10px;
+  font-size: var(--step--1);
+  font-weight: 600;
+  color: var(--ink-soft);
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.chip {
+  min-height: 40px;
+  min-width: 40px;
+  padding: 6px 14px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--paper);
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.chips[data-kind='cabin'] .chip {
+  padding-inline: 0;
+  font-variant-numeric: tabular-nums;
+}
+
+.chip:hover {
+  border-color: var(--spruce);
+}
+
+.chip[aria-pressed='true'] {
+  background: var(--spruce);
+  border-color: var(--spruce);
+  color: var(--paper);
+}
+
+.details {
+  padding: 22px 24px;
+  border-left: 3px solid var(--gold);
+  background: var(--paper);
+  border-radius: 0 var(--radius) var(--radius) 0;
+}
+
+.details h3 {
+  font-size: var(--step-2);
+  margin-bottom: 8px;
+}
+
+.details p {
+  color: var(--ink-soft);
+  margin-bottom: 12px;
+}
+
+.details p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 900px) {
+  .plan {
+    grid-template-columns: 1fr;
+  }
+}
